@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3. Prompts for drafting — Local LLMs for Authors</title>
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">Local LLMs for Authors <strong>· Asdale Dynamics, LLC</strong></h1>
+    <p class="site-subtitle">Section 3 — Prompts for drafting</p>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="choosing-models.html">1. Choosing a model</a></li>
+    <li><a href="ollama-setup.html">2. Ollama setup</a></li>
+    <li><a href="prompts-drafting.html">3. Prompts for drafting</a></li>
+    <li><a href="prompts-editing.html">4. Prompts for editing</a></li>
+    <li><a href="privacy-workflow.html">5. Privacy-safe workflow</a></li>
+    <li><a href="quick-reference.html">6. Quick reference (print)</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+<main>
+
+<h1>Prompts for drafting</h1>
+
+<p>A prompt is just the thing you type to the model. The clearer and more specific your prompt, the more useful the answer. You don't need special syntax — write like you're explaining something to a smart but unfamiliar assistant.</p>
+
+<p>Below are prompts you can copy, paste, and adjust. Each one includes a "fill in the blanks" version and an example.</p>
+
+<h2>How to use these</h2>
+<ol>
+  <li>Start Ollama: <code>ollama run llama3.2</code> (or your chosen model)</li>
+  <li>Paste the prompt, replacing the bracketed parts with your own details</li>
+  <li>Press Enter and read the reply</li>
+  <li>Copy anything useful into your manuscript</li>
+</ol>
+<p>You can keep asking follow-ups: "Make it funnier," "Give me three options," "Keep it under 200 words." The model remembers what you said earlier in the same conversation.</p>
+
+<h2>3.1 Chapter outline</h2>
+<div class="prompt">
+<code>I'm writing a [genre] book about [topic]. Help me outline Chapter [number], titled "[chapter title]."
+
+The chapter should cover: [key events or points].
+
+Please give me:
+1. A one-sentence chapter goal
+2. A bullet list of scenes or sections in order
+3. One open question or hook to carry into the next chapter</code>
+</div>
+<p><strong>Example:</strong></p>
+<div class="prompt">
+<code>I'm writing a cozy mystery about a retired nurse who solves murders at her church bake sale. Help me outline Chapter 3, titled "The Poisoned Pie."
+
+The chapter should cover: the bake sale begins, the main character notices someone acting nervous, a judge collapses after tasting a pie.
+
+Please give me:
+1. A one-sentence chapter goal
+2. A bullet list of scenes or sections in order
+3. One open question or hook to carry into the next chapter</code>
+</div>
+
+<h2>3.2 Scene draft</h2>
+<div class="prompt">
+<code>Write a scene for my [genre] book.
+
+Context: [what happened just before].
+Characters: [who is in the scene and their relationship].
+Setting: [where and when].
+Goal of the scene: [what needs to happen or be revealed].
+Tone: [tense, cozy, funny, sad, etc.]
+
+Write approximately [number] words. Show, don't just tell. Include dialogue.</code>
+</div>
+<p><strong>Example:</strong></p>
+<div class="prompt">
+<code>Write a scene for my cozy mystery book.
+
+Context: The main character, Maren, just found a poisoned pie at the church bake sale.
+Characters: Maren (retired nurse, observant, kind) and Father Tom (the priest, worried).
+Setting: The church fellowship hall, Saturday afternoon, crowded with tables of baked goods.
+Goal of the scene: Maren decides to investigate instead of calling the police, and Father Tom agrees to help quietly.
+Tone: Gentle, curious, slightly humorous.
+
+Write approximately 500 words. Show, don't just tell. Include dialogue.</code>
+</div>
+
+<h2>3.3 Dialogue</h2>
+<div class="prompt">
+<code>Write a conversation between [character A] and [character B].
+
+Character A: [description]
+Character B: [description]
+Situation: [what they're talking about and where]
+Mood: [tense, awkward, warm, etc.]
+
+Make each character sound distinct. Include a few actions or gestures so it's not just talking heads. Approximately [number] lines.</code>
+</div>
+
+<h2>3.4 Getting unstuck</h2>
+<div class="prompt">
+<code>I'm stuck on my [genre] book. Here's where I am:
+
+[paste the last few paragraphs you wrote]
+
+I need to [what should happen next], but I'm not sure how. Suggest three different ways to continue, ranging from quiet to dramatic. Keep each suggestion to one paragraph.</code>
+</div>
+
+<h2>3.5 Nonfiction: explain a concept</h2>
+<div class="prompt">
+<code>I'm writing a nonfiction book about [topic]. Explain [concept] for a beginner reader who knows nothing about it.
+
+Use plain English, short sentences, and one everyday analogy. Include a short example. Approximately [number] words. Avoid jargon, or explain it if you use it.</code>
+</div>
+
+<h2>Tips</h2>
+<ul>
+  <li><strong>Paste your own writing.</strong> The model works better when it has your actual text to react to.</li>
+  <li><strong>Ask for options.</strong> "Give me three versions" often produces at least one you like.</li>
+  <li><strong>You're the editor.</strong> The model suggests; you decide. Keep what works, discard the rest.</li>
+  <li><strong>Start a new chat for a new project.</strong> Otherwise the model may mix up your books.</li>
+</ul>
+
+<div class="callout">
+<strong>Next:</strong> <a href="prompts-editing.html">Prompts for editing — section 4</a>.
+</div>
+
+<p class="print-note">Published by Asdale Dynamics, LLC · Copyright (c) 2026 Asdale Dynamics, LLC · MIT License</p>
+
+</main>
+</div>
+
+<footer class="site-footer">
+  <p>Published by <strong>Asdale Dynamics, LLC</strong> — beginner-friendly AI education for authors.</p>
+  <p>Copyright (c) 2026 Asdale Dynamics, LLC · MIT License</p>
+</footer>
+
+</body>
+</html>

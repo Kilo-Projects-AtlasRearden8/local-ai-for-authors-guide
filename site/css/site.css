@@ -1,0 +1,266 @@
+/* Asdale Dynamics — Local LLMs for Authors site styles */
+/* Simple, warm, readable, print-friendly */
+
+:root {
+  --ink: #1a1a1a;
+  --muted: #4a4a4a;
+  --paper: #ffffff;
+  --panel: #f7f5f0;
+  --accent: #6b4a2b;
+  --accent-hover: #8e6a3f;
+  --line: #d9d3c8;
+  --soft: #eef0f2;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+a:hover { color: var(--accent-hover); }
+
+/* Header */
+
+.site-header {
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  padding: 28px 0;
+}
+
+.site-header .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: 0.2px;
+  color: var(--ink);
+}
+
+.site-title strong {
+  color: var(--accent);
+}
+
+.site-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Navigation */
+
+.main-nav {
+  background: var(--ink);
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.main-nav li { margin: 0; }
+
+.main-nav a {
+  display: block;
+  padding: 12px 14px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  background: rgba(255,255,255,0.08);
+  color: #ffe0b2;
+  border-bottom-color: var(--accent);
+  border-radius: 3px;
+}
+
+/* Main layout */
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+main h1 {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+main h2 {
+  font-size: 20px;
+  margin-top: 32px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 6px;
+}
+
+main h3 {
+  font-size: 16px;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+main p { margin: 0 0 16px; }
+
+main ul, main ol {
+  margin: 8px 0 16px;
+  padding-left: 24px;
+}
+
+main li { margin-bottom: 6px; }
+
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+main th, main td {
+  border: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+main th { background: var(--panel); }
+
+main blockquote {
+  border-left: 4px solid var(--accent);
+  margin: 16px 0;
+  padding: 10px 16px;
+  background: var(--panel);
+  font-style: italic;
+}
+
+main code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+  background: var(--soft);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+main pre {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 12px 16px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+main .prompt {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+main .prompt code {
+  display: block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.callout {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  padding: 14px 18px;
+  margin: 20px 0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.callout strong { color: var(--accent); }
+
+/* Quick reference tweaks */
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .quick-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.card h3 { margin-top: 0; border: none; }
+
+/* Footer */
+
+.site-footer {
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+  padding: 30px 20px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.site-footer p { margin: 4px 0; }
+
+/* Print styles go in print.css; this is a light base */
+@media print {
+  body { font-size: 11pt; line-height: 1.5; }
+  .site-header, .main-nav, .site-footer { display: none; }
+  .container { max-width: 100%; padding: 0; }
+  main h2 { page-break-after: avoid; }
+  main blockquote, main .prompt, .card { page-break-inside: avoid; }
+  a { color: var(--ink); text-decoration: none; }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .site-header .container { align-items: center; text-align: center; }
+  .main-nav { padding-left: 0; padding-right: 0; }
+  .main-nav a { padding: 10px 14px; }
+}

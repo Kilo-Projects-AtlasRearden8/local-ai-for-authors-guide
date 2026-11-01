@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1. Choosing a model — Local LLMs for Authors</title>
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">Local LLMs for Authors <strong>· Asdale Dynamics, LLC</strong></h1>
+    <p class="site-subtitle">Section 1 — Choosing a model</p>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="choosing-models.html">1. Choosing a model</a></li>
+    <li><a href="ollama-setup.html">2. Ollama setup</a></li>
+    <li><a href="prompts-drafting.html">3. Prompts for drafting</a></li>
+    <li><a href="prompts-editing.html">4. Prompts for editing</a></li>
+    <li><a href="privacy-workflow.html">5. Privacy-safe workflow</a></li>
+    <li><a href="quick-reference.html">6. Quick reference (print)</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+<main>
+
+<h1>Choosing a model</h1>
+
+<p><strong>The short answer:</strong> if you're just starting out, download <strong>Llama 3.2 3B</strong> or <strong>Llama 3.1 8B</strong> through Ollama. They're small enough to run on most laptops, good at writing and editing, and free.</p>
+
+<p>If your computer has 16 GB of RAM or more, <strong>Qwen 2.5 7B</strong> or <strong>Llama 3.1 8B</strong> are excellent all-rounders for drafting and editing fiction or nonfiction.</p>
+
+<h2>What the names mean</h2>
+<p>Model names look like alphabet soup, but they follow a pattern. Take <code>llama3.2:3b</code>:</p>
+<ul>
+  <li><code>llama</code> — the family of the model (made by Meta)</li>
+  <li><code>3.2</code> — the version (newer is usually better)</li>
+  <li><code>3b</code> — the size: 3 billion parameters. "b" = billion.</li>
+</ul>
+<p>Parameters are like the model's knobs and dials. More parameters generally means smarter writing, but also more memory and disk space.</p>
+<p>You'll also see tags like <code>q4_K_M</code>. That's the <strong>quantization</strong> — how much the model was compressed to fit on your computer. Lower numbers (<code>q4</code>) use less RAM; higher numbers (<code>q8</code>) use more RAM but can be slightly sharper. Ollama handles this for you; just pick the default unless you have a reason not to.</p>
+
+<h2>Size vs. your computer (rule of thumb)</h2>
+<table>
+  <thead>
+    <tr><th>Your RAM</th><th>Comfortable model size</th><th>Example models</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>8 GB</td><td>1B–3B</td><td>Llama 3.2 1B, 3B</td></tr>
+    <tr><td>16 GB</td><td>7B–8B</td><td>Llama 3.1 8B, Qwen 2.5 7B</td></tr>
+    <tr><td>32 GB+</td><td>14B–70B</td><td>Llama 3.1 70B, Qwen 2.5 32B</td></tr>
+  </tbody>
+</table>
+<p class="print-note">These are rough guidelines, not hard rules. Your operating system and other open apps (browser, word processor) use RAM too, so leave some headroom.</p>
+<p>If your computer feels slow, try a smaller model. A 3B model that runs smoothly is more useful than a 70B model that makes your laptop crawl.</p>
+
+<h2>Recommended models for authors</h2>
+<table>
+  <thead>
+    <tr><th>Use case</th><th>Model</th><th>Ollama command</th><th>Best for</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Just starting, modest laptop</td><td>Llama 3.2 3B</td><td><code>ollama run llama3.2</code></td><td>Drafting, editing, chatting</td></tr>
+    <tr><td>All-rounder, 16 GB RAM</td><td>Qwen 2.5 7B</td><td><code>ollama run qwen2.5:7b</code></td><td>Stronger drafting and editing</td></tr>
+    <tr><td>Serious editing, 16+ GB RAM</td><td>Llama 3.1 8B</td><td><code>ollama run llama3.1</code></td><td>Nuance, consistency, pacing</td></tr>
+    <tr><td>Creative fiction, 16+ GB</td><td>Mistral Nemo</td><td><code>ollama run mistral-nemo</code></td><td>Dialogue, scene writing</td></tr>
+  </tbody>
+</table>
+<p>You can have several models installed and switch between them. Try one, see how it feels, and switch if you want.</p>
+
+<h2>Where to find more models</h2>
+<p>Ollama's model library is at <a href="https://ollama.com/library" target="_blank" rel="noopener">ollama.com/library</a>. It lists hundreds of models with their sizes and requirements. You don't need an account to browse.</p>
+<p>Asdale Dynamics does not endorse any specific model company. Pick what works on your computer and feels helpful for your writing.</p>
+
+<div class="callout">
+<strong>Next step:</strong> once you've picked a model, install Ollama in <a href="ollama-setup.html">section 2</a>.
+</div>
+
+<p class="print-note">Published by Asdale Dynamics, LLC · Copyright (c) 2026 Asdale Dynamics, LLC · MIT License</p>
+
+</main>
+</div>
+
+<footer class="site-footer">
+  <p>Published by <strong>Asdale Dynamics, LLC</strong> — beginner-friendly AI education for authors.</p>
+  <p>Copyright (c) 2026 Asdale Dynamics, LLC · MIT License</p>
+</footer>
+
+</body>
+</html>

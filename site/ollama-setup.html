@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2. Ollama setup — Local LLMs for Authors</title>
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">Local LLMs for Authors <strong>· Asdale Dynamics, LLC</strong></h1>
+    <p class="site-subtitle">Section 2 — Ollama setup</p>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="choosing-models.html">1. Choosing a model</a></li>
+    <li><a href="ollama-setup.html">2. Ollama setup</a></li>
+    <li><a href="prompts-drafting.html">3. Prompts for drafting</a></li>
+    <li><a href="prompts-editing.html">4. Prompts for editing</a></li>
+    <li><a href="privacy-workflow.html">5. Privacy-safe workflow</a></li>
+    <li><a href="quick-reference.html">6. Quick reference (print)</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+<main>
+
+<h1>Ollama setup</h1>
+
+<p>Ollama is a free app that downloads and runs local language models. Think of it like iTunes for AI models: you pick a model, Ollama downloads it, and you can run it whenever you like.</p>
+
+<h2>Step 1: Download Ollama</h2>
+<ol>
+  <li>Go to <a href="https://ollama.com" target="_blank" rel="noopener">ollama.com</a>.</li>
+  <li>Click "Download Ollama" and choose your operating system:
+    <ul>
+      <li><strong>macOS:</strong> download the <code>.dmg</code>, open it, and drag Ollama into your Applications folder.</li>
+      <li><strong>Windows:</strong> download the installer, run it, and follow the prompts.</li>
+      <li><strong>Linux:</strong> open a terminal and run:
+        <pre>curl -fsSL https://ollama.com/install.sh | sh</pre>
+      </li>
+    </ul>
+  </li>
+  <li>Launch Ollama. It runs quietly in the background (you'll see a small icon in your menu bar or system tray).</li>
+</ol>
+<p>You do not need to create an account. You do not need to enter a credit card.</p>
+
+<h2>Step 2: Pull your first model</h2>
+<p>Open your terminal (Mac: Terminal; Windows: PowerShell or Command Prompt; Linux: your terminal app) and type:</p>
+<pre>ollama run llama3.2</pre>
+<p>This downloads the Llama 3.2 3B model (about 2 GB) and starts a chat right in your terminal. The first time, it may take a few minutes depending on your internet speed. After that, the model stays on your computer.</p>
+<p>You'll see a prompt like <code>&gt;&gt;&gt;</code>. Type something and press Enter:</p>
+<pre>&gt;&gt;&gt; Hello, I'm writing a book. Can you help me outline a chapter?</pre>
+<p>When you're done chatting, type <code>/bye</code> to exit.</p>
+
+<h2>Step 3: Try a few basic commands</h2>
+<table>
+  <thead>
+    <tr><th>Command</th><th>What it does</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>ollama run llama3.2</code></td><td>Start chatting with a model</td></tr>
+    <tr><td><code>ollama list</code></td><td>Show models installed on your computer</td></tr>
+    <tr><td><code>ollama pull qwen2.5:7b</code></td><td>Download another model without starting chat</td></tr>
+    <tr><td><code>ollama rm llama3.2</code></td><td>Remove a model to free disk space</td></tr>
+    <tr><td><code>ollama stop llama3.2</code></td><td>Stop a running model</td></tr>
+  </tbody>
+</table>
+
+<h2>Step 4: Use Ollama with your writing</h2>
+<p>The terminal chat is fine for quick questions, but for writing a book you'll want to paste text between Ollama and your word processor (Word, Google Docs offline, Scrivener, LibreOffice, or a plain text editor).</p>
+<p>Typical workflow:</p>
+<ol>
+  <li>Open Ollama in your terminal: <code>ollama run llama3.2</code></li>
+  <li>Paste a prompt and your text (see sections 3 and 4).</li>
+  <li>Copy the model's reply back into your document.</li>
+  <li>Type <code>/bye</code> when you're done for the session.</li>
+</ol>
+
+<h2>Troubleshooting</h2>
+<ul>
+  <li><strong>"command not found: ollama"</strong> — Ollama may not be installed, or your terminal needs to be restarted after installation. Close and reopen your terminal, then try again.</li>
+  <li><strong>Not enough memory</strong> — Your computer may warn you that it's out of memory. Try a smaller model (e.g., <code>llama3.2:1b</code> instead of <code>llama3.2:3b</code>), and close other apps like your browser.</li>
+  <li><strong>Slow responses</strong> — Local models are slower on computers without a graphics card. That's normal. Start with a smaller model for speed.</li>
+</ul>
+
+<div class="callout">
+<strong>Next step:</strong> now that Ollama is running, try the drafting prompts in <a href="prompts-drafting.html">section 3</a>.
+</div>
+
+<p class="print-note">Published by Asdale Dynamics, LLC · Copyright (c) 2026 Asdale Dynamics, LLC · MIT License</p>
+
+</main>
+</div>
+
+<footer class="site-footer">
+  <p>Published by <strong>Asdale Dynamics, LLC</strong> — beginner-friendly AI education for authors.</p>
+  <p>Copyright (c) 2026 Asdale Dynamics, LLC · MIT License</p>
+</footer>
+
+</body>
+</html>

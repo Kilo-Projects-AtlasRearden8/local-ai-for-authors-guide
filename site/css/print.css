@@ -1,0 +1,28 @@
+/* Print-only styles for the quick-reference page */
+/* These apply in addition to site.css print rules */
+
+@media print {
+  body {
+    font-size: 10.5pt;
+    line-height: 1.5;
+    color: #1a1a1a;
+  }
+  .site-header, .main-nav, .site-footer { display: none; }
+  .container { max-width: 100%; padding: 0; }
+  main h1 { font-size: 20pt; margin-bottom: 6px; }
+  main h2 { font-size: 14pt; page-break-after: avoid; margin-top: 20px; }
+  main h3 { font-size: 12pt; page-break-after: avoid; }
+  main p, main li { font-size: 10.5pt; }
+  main table { font-size: 9.5pt; }
+  main .prompt, .card, blockquote {
+    page-break-inside: avoid;
+    background: #f7f5f0 !important;
+  }
+  main .prompt code { white-space: pre-wrap; }
+  .quick-grid { grid-template-columns: 1fr; }
+  a { color: #1a1a1a; text-decoration: none; }
+  .print-note { display: block; font-size: 8.5pt; color: #4a4a4a; margin-top: 14px; }
+}
+
+/* Screen overrides for quick reference page */
+.print-note { display: none; }

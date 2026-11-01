@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4. Prompts for editing — Local LLMs for Authors</title>
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">Local LLMs for Authors <strong>· Asdale Dynamics, LLC</strong></h1>
+    <p class="site-subtitle">Section 4 — Prompts for editing</p>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="choosing-models.html">1. Choosing a model</a></li>
+    <li><a href="ollama-setup.html">2. Ollama setup</a></li>
+    <li><a href="prompts-drafting.html">3. Prompts for drafting</a></li>
+    <li><a href="prompts-editing.html">4. Prompts for editing</a></li>
+    <li><a href="privacy-workflow.html">5. Privacy-safe workflow</a></li>
+    <li><a href="quick-reference.html">6. Quick reference (print)</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+<main>
+
+<h1>Prompts for editing</h1>
+
+<p>Editing is where a book becomes a book. A local LLM is a good first reader: it can spot repetition, suggest tighter sentences, flag inconsistencies, and help you see your draft with fresh eyes. It doesn't replace a human editor, but it catches a lot before you ever send a manuscript anywhere.</p>
+
+<p>Copy and adapt these prompts. Paste your actual text where you see brackets.</p>
+
+<h2>How to use these</h2>
+<ol>
+  <li>Start Ollama: <code>ollama run llama3.2</code> (or your chosen model)</li>
+  <li>Paste the prompt with your text inserted</li>
+  <li>Read the suggestions, then decide what to keep</li>
+  <li>Apply changes in your word processor</li>
+</ol>
+<p>Work on one chapter or one scene at a time. Pasting an entire manuscript at once usually gives vague answers.</p>
+
+<h2>4.1 Line edit (tighten and polish)</h2>
+<div class="prompt">
+<code>Please line-edit the following passage. Tighten wordy sentences, remove repeated words, smooth awkward phrasing, and fix grammar. Keep my voice and tone intact. Do not rewrite the story — just polish the prose.
+
+Return the edited passage, followed by a short list of the main changes you made.
+
+[paste your passage here]</code>
+</div>
+
+<h2>4.2 Copyediting checklist</h2>
+<div class="prompt">
+<code>Act as a careful copyeditor. Review the following text for:
+- Spelling and typos
+- Punctuation errors
+- Inconsistent capitalization or hyphenation
+- Repeated words or phrases
+- Tense shifts
+
+List each issue with the original text and a suggested fix. Do not rewrite the whole passage.
+
+[paste your passage here]</code>
+</div>
+
+<h2>4.3 Consistency check</h2>
+<div class="prompt">
+<code>I'm writing a [genre] book. Check the following scene for consistency:
+
+- Character names spelled the same way throughout
+- Character details (age, hair color, relationships) stay the same
+- Timeline makes sense (no impossible travel, wrong days, etc.)
+- Setting details don't contradict earlier scenes
+
+Flag anything that seems off, with a short explanation.
+
+[paste your scene here]</code>
+</div>
+
+<h2>4.4 Show, don't tell</h2>
+<div class="prompt">
+<code>Look at the following passage and find places where the writing "tells" instead of "shows" (e.g., "she was angry" instead of describing her clenched jaw).
+
+For each example, suggest a rewrite that shows the emotion or action through detail, dialogue, or movement. Keep it brief.
+
+[paste your passage here]</code>
+</div>
+
+<h2>4.5 Pacing and flow</h2>
+<div class="prompt">
+<code>Read the following scene and tell me:
+1. Where the pacing drags or rushes
+2. Whether each paragraph moves the story forward
+3. One specific suggestion to improve the flow
+
+Be kind but honest.
+
+[paste your scene here]</code>
+</div>
+
+<h2>4.6 Sensitivity and clarity (nonfiction)</h2>
+<div class="prompt">
+<code>I'm writing a nonfiction book about [topic]. Review this passage for:
+- Language that could be unclear to a beginner
+- Jargon that isn't explained
+- Assumptions about the reader's background
+
+Suggest simpler phrasing where helpful. Keep the meaning accurate.
+
+[paste your passage here]</code>
+</div>
+
+<h2>4.7 Before-and-after example</h2>
+<p><strong>Before (paste to the model):</strong></p>
+<blockquote>She was very angry as she walked into the room and she saw the pie on the table and it looked wrong.</blockquote>
+<p><strong>Prompt:</strong></p>
+<div class="prompt">
+<code>Rewrite this to show emotion through action and detail instead of naming it. Keep it under 40 words.</code>
+</div>
+<p><strong>Possible model reply:</strong></p>
+<blockquote>Maren slammed the fellowship hall door. The blueberry pie sat on the table, crust split open, filling weeping onto the linen.</blockquote>
+
+<h2>Tips</h2>
+<ul>
+  <li><strong>Disagree freely.</strong> If a suggestion doesn't sound like you, ignore it. You're the author.</li>
+  <li><strong>One thing at a time.</strong> Line-edit first, then check consistency, then pacing. Don't try to do everything in one prompt.</li>
+  <li><strong>Keep versions.</strong> Save your draft before applying edits, so you can go back if you change your mind.</li>
+  <li><strong>Read aloud.</strong> The model catches grammar; your ear catches rhythm.</li>
+</ul>
+
+<div class="callout">
+<strong>Next:</strong> <a href="privacy-workflow.html">Privacy-safe workflow — section 5</a>.
+</div>
+
+<p class="print-note">Published by Asdale Dynamics, LLC · Copyright (c) 2026 Asdale Dynamics, LLC · MIT License</p>
+
+</main>
+</div>
+
+<footer class="site-footer">
+  <p>Published by <strong>Asdale Dynamics, LLC</strong> — beginner-friendly AI education for authors.</p>
+  <p>Copyright (c) 2026 Asdale Dynamics, LLC · MIT License</p>
+</footer>
+
+</body>
+</html>

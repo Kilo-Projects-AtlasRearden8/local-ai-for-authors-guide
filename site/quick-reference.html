@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6. Quick reference (printable) — Local LLMs for Authors</title>
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">Local LLMs for Authors <strong>· Asdale Dynamics, LLC</strong></h1>
+    <p class="site-subtitle">Section 6 — Quick reference (printable)</p>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="choosing-models.html">1. Choosing a model</a></li>
+    <li><a href="ollama-setup.html">2. Ollama setup</a></li>
+    <li><a href="prompts-drafting.html">3. Prompts for drafting</a></li>
+    <li><a href="prompts-editing.html">4. Prompts for editing</a></li>
+    <li><a href="privacy-workflow.html">5. Privacy-safe workflow</a></li>
+    <li><a href="quick-reference.html">6. Quick reference (print)</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+<main>
+
+<h1>Quick reference (printable)</h1>
+<p>Print this page and keep it next to your computer.</p>
+
+<div class="quick-grid">
+
+<div class="card">
+<h3>Ollama commands</h3>
+<table>
+  <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td><code>ollama run llama3.2</code></td><td>Start chatting with Llama 3.2</td></tr>
+    <tr><td><code>ollama run qwen2.5:7b</code></td><td>Start chatting with Qwen 2.5 7B</td></tr>
+    <tr><td><code>ollama list</code></td><td>Show installed models</td></tr>
+    <tr><td><code>ollama pull &lt;model&gt;</code></td><td>Download a model</td></tr>
+    <tr><td><code>ollama rm &lt;model&gt;</code></td><td>Remove a model</td></tr>
+    <tr><td><code>ollama stop &lt;model&gt;</code></td><td>Stop a running model</td></tr>
+    <tr><td><code>/bye</code></td><td>Exit a chat session</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="card">
+<h3>Choosing a model (rule of thumb)</h3>
+<table>
+  <thead><tr><th>Your RAM</th><th>Size</th><th>Examples</th></tr></thead>
+  <tbody>
+    <tr><td>8 GB</td><td>1B–3B</td><td>Llama 3.2 1B, 3B</td></tr>
+    <tr><td>16 GB</td><td>7B–8B</td><td>Qwen 2.5 7B, Llama 3.1 8B</td></tr>
+    <tr><td>32 GB+</td><td>14B–70B</td><td>Llama 3.1 70B</td></tr>
+  </tbody>
+</table>
+<p>Slower computer? Use a smaller model.</p>
+</div>
+
+<div class="card">
+<h3>Prompt templates</h3>
+<div class="prompt"><code>Outline Chapter [number], "[title]": goal, scenes in order, one hook.</code></div>
+<div class="prompt"><code>Write a scene: [context]. Characters: [who]. Setting: [where]. Goal: [what happens]. Tone: [mood]. ~500 words. Show, don't tell.</code></div>
+<div class="prompt"><code>Line-edit this passage: tighten sentences, remove repeats, fix grammar. Keep my voice. List changes.</code></div>
+<div class="prompt"><code>Check names, details, timeline, setting for consistency. Flag issues.</code></div>
+<div class="prompt"><code>Find "telling" phrases. Suggest rewrites that show emotion through action.</code></div>
+</div>
+
+<div class="card">
+<h3>Privacy checklist</h3>
+<ul>
+  <li>Model runs locally via Ollama</li>
+  <li>Book folder saved on your computer</li>
+  <li>Offline while writing (optional)</li>
+  <li>Weekly backup to USB or second computer</li>
+  <li>Dated drafts before big edits</li>
+  <li>No manuscript text pasted into websites</li>
+</ul>
+</div>
+
+</div>
+
+<div class="callout">
+<p><strong>Remember:</strong> you're the editor. The model suggests; you decide. Keep what works, discard the rest. Start small — one chapter, one prompt, one day at a time.</p>
+<p class="print-note">Written by Asdale Dynamics, LLC — beginner-friendly AI education for authors.<br>
+Copyright (c) 2026 Asdale Dynamics, LLC · MIT License</p>
+</div>
+
+</main>
+</div>
+
+<footer class="site-footer">
+  <p>Published by <strong>Asdale Dynamics, LLC</strong> — beginner-friendly AI education for authors.</p>
+  <p>Copyright (c) 2026 Asdale Dynamics, LLC · MIT License</p>
+</footer>
+
+</body>
+</html>
