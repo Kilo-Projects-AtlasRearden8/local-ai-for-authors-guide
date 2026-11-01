@@ -6,7 +6,8 @@ A beginner manual for running local LLMs (large language models) on your own com
 
 Structure:
 - `LICENSE` — MIT License, copyright line exactly `Copyright (c) 2026 Asdale Dynamics, LLC`
-- `README.md` — project overview crediting Asdale Dynamics, LLC, with section table of contents
+- `README.md` — project overview crediting Asdale Dynamics, LLC; covers Dylan Asdale (registered nurse turned AI author, Indiana, formed Oct 2026), *The Massive AI Manual*, and dylanasdale.github.io; section index; verification instructions; no-secrets policy
+- `Makefile` — `make check` target that validates every HTML page parses cleanly and every internal link resolves (runs an inline Python check)
 - `docs/` — Markdown manual:
   - `00-introduction.md` — what a local LLM is, why privacy matters, what you need
   - `01-choosing-models.md` — how to pick a model, size vs. RAM, recommended models
@@ -29,16 +30,16 @@ Structure:
 
 ## Verification results
 
-- All 7 HTML pages parse cleanly (no unclosed or mismatched tags) via Python html.parser.
+- `make check` / inline Python validation: **OK** — all 7 HTML pages parse cleanly (no unclosed or mismatched tags).
 - All internal links (`href`) resolve to existing files; external links are http(s) only.
 - No `.github/workflows` directory present.
-- No API keys, secrets, passwords, or personal data found in any file (pattern scan clean).
+- Secrets scan clean — no API keys, secrets, passwords, tokens, or personal data in any file.
 - Exact copyright line `Copyright (c) 2026 Asdale Dynamics, LLC` present in `LICENSE`; Asdale Dynamics, LLC credited in `README.md` and every `site/*.html` footer.
 - `README.md` confirms MIT License and no-secrets policy.
+- Git: one commit on branch `master`, working tree clean.
 
 ## Known gaps
 
-- No automated test suite or linter is configured (static docs/site only; nothing to compile or run).
-- Ollama itself and the model files are not included — they must be downloaded separately per `docs/02-ollama-setup.md`.
-- The HTML pages were not rendered in a real browser; visual layout was not checked.
-- No search, sitemap, or RSS feed for the static site.
+- Ollama itself and the model files are not included — they must be downloaded separately per `docs/02-ollama-setup.md` (cannot be bundled).
+- The HTML pages were validated structurally but not rendered in a real browser; visual layout was not checked.
+- No search, sitemap, or RSS feed for the static site (not required by the goal).

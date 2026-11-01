@@ -6,7 +6,7 @@ Written for beginner writers — nurses, teachers, retirees, anyone who wants to
 
 ## About
 
-This guide is published by **Asdale Dynamics, LLC**, an Indiana LLC formed in October 2026 and founded by Dylan Asdale, a registered nurse turned AI author. Asdale Dynamics makes beginner-friendly AI education, books and guides, and practical tools for authors and small businesses. Dylan writes AI explanations "like a friend would" — plain English, step by step, never condescending — on his hub site at dylanasdale.github.io and in books such as *The Massive AI Manual*.
+This guide is published by **Asdale Dynamics, LLC**, an Indiana LLC formed in October 2026 and founded by Dylan Asdale, a registered nurse turned AI author. Asdale Dynamics makes beginner-friendly AI education, books and guides, and practical tools for authors and small businesses. Dylan writes AI explanations "like a friend would" — plain English, step by step, never condescending — on his hub site at [dylanasdale.github.io](https://dylanasdale.github.io) and in books such as *The Massive AI Manual*.
 
 This guide is part of Asdale Dynamics' local-first, privacy-safe AI education series.
 
@@ -33,6 +33,18 @@ A static HTML version of this manual lives in `site/`. Open any `.html` file in 
 5. Try the editing prompts in section 04.
 6. Set up your privacy-safe workflow in section 05.
 7. Print section 06 and keep it next to your computer.
+
+## Verify it
+
+This is a static docs and HTML site — there is nothing to compile. To verify the files are well-formed, run the check in the `Makefile`:
+
+```
+make check
+```
+
+(If `make` isn't installed, the `Makefile` runs the same Python validation inline; you can copy that Python snippet and run it directly.)
+
+It validates that every HTML page parses cleanly and every internal link resolves to an existing file.
 
 ## License
 
